@@ -8,38 +8,12 @@ on:
 
 jobs:
   build-linux:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: make
-      run: make
-    - name: make clean
-      run: make clean
-    - uses: actions/upload-artifact@v4
-      with:
-        name: resgen-linux
-        if-no-files-found: error
-        path: bin/resgen
-
-  build-win32:
-    runs-on: windows-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Set up MSBuild
-        uses: microsoft/setup-msbuild@v2
-      - name: Build solution
-        run: msbuild RESGen.sln /p:Configuration=Release
-      - uses: actions/upload-artifact@v4
-        with:
-          name: resgen-win32
-          if-no-files-found: error
-          path: Release/RESGen.exe
+    uses: ./.github/workflows/build-linux.yml
+  build-windows:
+    uses: ./.github/workflows/build-windows.yml
 
   package:
-    needs: [build-linux, build-win32]
+    needs: [build-linux, build-windows]
     runs-on: ubuntu-latest
 
     steps:
