@@ -1,0 +1,61 @@
+name: Build Release Version
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: make
+      run: make
+    - name: make clean
+      run: make clean
+    - uses: actions/upload-artifact@v4
+      with:
+        name: resgen-linux
+        if-no-files-found: error
+        path: bin/resgen
+
+  build-win32:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up MSBuild
+        uses: microsoft/setup-msbuild@v2
+      - name: Build solution
+        run: msbuild RESGen.sln /p:Configuration=Release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: resgen-win32
+          if-no-files-found: error
+          path: Release/RESGen.exe
+
+  package:
+    needs: [build-linux, build-win32]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Download build executables
+        uses: actions/download-artifact@v4
+      - name: Gather release files
+        run: mkdir resgen_release/
+      - run: cp resgen-linux/resgen resgen_release/
+      - run: cp resgen-win32/RESGen.exe resgen_release/
+      - run: cp -r rfa/ resgen_release/
+      - run: cp LICENSE resgen_release/
+      - run: cp README.md resgen_release/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: resgen-release
+          path: resgen_release/*
+

@@ -3,10 +3,6 @@ RESGen is a tool to create res (resource) files for Half-Life. If a Half-Life ma
 
 The problem with res files, however, is that it can take hours to create one if the resources used by a map are not known. RESGen can shorten this time to mere seconds. It reads the maps BSP file and searches it for used resources. The results of this search are then used to create the res file.
 
-Master: [![Build Status](https://travis-ci.org/kriswema/resgen.png?branch=master)](https://travis-ci.org/kriswema/resgen)
-
-Develop: [![Build Status](https://travis-ci.org/kriswema/resgen.png?branch=develop)](https://travis-ci.org/kriswema/resgen)
-
 ## Usage ##
 * -a [rfafile]
   * The contents of the rfa file will be added to the end of the res file. This is useful when adding custom resources, like the StatsMe sound pack. The .rfa file extension is optional.
