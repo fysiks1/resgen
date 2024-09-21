@@ -157,7 +157,7 @@ void showhelp()
 	printf("\nExample:\n");
 	printf("   resgen -f boot_camp -d . -r ../mappack -e hlds_l/cstrike\n\n");
 
-	printf("Read RESGen.txt for more information!\n");
+	printf("See README.md for more information!\n");
 }
 
 void showwarranty()
