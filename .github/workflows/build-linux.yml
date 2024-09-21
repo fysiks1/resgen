@@ -1,0 +1,20 @@
+name: build-linux
+
+on:
+  workflow_call:
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: make
+        run: make
+      - name: make clean
+        run: make clean
+      - uses: actions/upload-artifact@v4
+        with:
+          name: resgen-linux
+          if-no-files-found: error
+          path: bin/resgen
