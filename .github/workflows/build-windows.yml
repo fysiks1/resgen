@@ -1,0 +1,20 @@
+name: build-windows
+
+on:
+  workflow_call:
+
+jobs:
+  build-win32:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up MSBuild
+        uses: microsoft/setup-msbuild@v2
+      - name: Build solution
+        run: msbuild RESGen.sln /p:Configuration=Release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: resgen-win32
+          if-no-files-found: error
+          path: Release/RESGen.exe
