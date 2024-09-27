@@ -115,6 +115,10 @@ along with RESGen; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 ## Changelog ##
+Version 2.1.0
+ - Add support for point_hud_icon_(allies|axis|neutral) which define custom
+   objective icons (icons that show the state of Day of Defeat control
+   points on the HUD).
 Version 2.0.3
  - New: Added -n option to preserve WAD files in .res file, even if unused.
 Version 2.0.2
