@@ -263,7 +263,7 @@ int RESGen::MakeRES(std::string &map, int fileindex, size_t filecount, const Str
 						break;
 					default:
 						if( icon > 27 )
-							printf("Unknown value: %s = %d\n", kv->first, icon);
+							printf("Unknown Objective Icon Value: %s = %d\n", kv->first, icon);
 				}
 			}
 
