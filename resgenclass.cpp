@@ -222,6 +222,51 @@ int RESGen::MakeRES(std::string &map, int fileindex, size_t filecount, const Str
 				}
 			}
 
+			// Check for Day of Defeat custom objective icons
+			if( strncmp(kv->first, "point_hud_icon_", 15) == 0)
+			{
+				const int icon = atoi(kv->second);
+
+				char rel_path_spr[64];
+				sprintf(rel_path_spr, "sprites/obj_icons/%s/", basefilename.c_str());
+				switch( icon )
+				{
+					case 18:
+						AddRes("icon_obj_custom1_allies", rel_path_spr, ".spr");
+						break;
+					case 19:
+						AddRes("icon_obj_custom1_axis", rel_path_spr, ".spr");
+						break;
+					case 20:
+						AddRes("icon_obj_custom1_neutral", rel_path_spr, ".spr");
+						break;
+					case 21:
+						AddRes("icon_obj_custom2_allies", rel_path_spr, ".spr");
+						break;
+					case 22:
+						AddRes("icon_obj_custom2_axis", rel_path_spr, ".spr");
+						break;
+					case 23:
+						AddRes("icon_obj_custom2_neutral", rel_path_spr, ".spr");
+						break;
+					case 24:
+						AddRes("icon_obj_custom3_allies", rel_path_spr, ".spr");
+						break;
+					case 25:
+						AddRes("icon_obj_custom3_axis", rel_path_spr, ".spr");
+						break;
+					case 26:
+						AddRes("icon_obj_custom3_neutral", rel_path_spr, ".spr");
+						break;
+					case 27:
+						AddRes("icon_obj_custom1_brit", rel_path_spr, ".spr");
+						break;
+					default:
+						if( icon > 27 )
+							printf("Unknown value: %s = %d\n", kv->first, icon);
+				}
+			}
+
 			const char *token = kv->second;
 
 			// TODO: This is fast, but should be made more robust if possible
