@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0
+- Add support for point_hud_icon_(allies|axis|neutral) which define custom
+  objective icons
+
 ## 2.0.3
 
 - New: Added -n option to preserve WAD files in .res file, even if unused.
