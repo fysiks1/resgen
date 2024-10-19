@@ -2,8 +2,7 @@
 
 ## 2.1.0
 - Add support for point_hud_icon_(allies|axis|neutral) which define custom
-  objective icons (icons that show the state of Day of Defeat control
-  points on the HUD).
+  objective icons
 
 ## 2.0.3
 
