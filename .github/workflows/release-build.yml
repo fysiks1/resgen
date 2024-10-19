@@ -28,6 +28,7 @@ jobs:
       - run: cp -r rfa/ resgen_release/
       - run: cp LICENSE resgen_release/
       - run: cp README.md resgen_release/
+      - run: cp CHANGELOG.md resgen_release/
       - uses: actions/upload-artifact@v4
         with:
           name: resgen-release
