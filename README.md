@@ -98,7 +98,9 @@ http://resgen.hltools.com
 ## License ##
 Copyright (C) 2000-2005 Jeroen Bogers, Zero3Cool
 
-Copyright (c) 2013-2014 [GitHub contributors] (https://github.com/kriswema/resgen/contributors)
+Copyright (C) 2013-2014 [GitHub contributors](https://github.com/kriswema/resgen/contributors)
+
+Copyright (C) 2024 [Fysiks](https://github.com/fysiks1)
 
 RESGen is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
