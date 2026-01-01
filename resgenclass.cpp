@@ -736,6 +736,12 @@ void RESGen::AddWad(const std::string &wadlist, size_t start, size_t len)
 	// strip folders
 	wadfile = wadfile.substr(wadfile.rfind('/') + 1);
 
+	// Exclude "tempdecal.wad"
+	if( wadfile == "tempdecal.wad" )
+	{
+		return;
+	}
+
 	// Add file to reslist
 	AddRes(wadfile);
 }
