@@ -761,9 +761,9 @@ bool RESGen::WriteRes(const std::string &folder, const std::string &mapname)
 
 	// Header
 	fprintf(f, "// %s - created with RESGen v%s.\n", (mapname + ".res").c_str(), VERSION);
-	fprintf(f, "// RESGen is made by Jeroen \"ShadowLord\" Bogers,\n");
-	fprintf(f, "// with serveral improvements and additions by Zero3Cool.\n");
-	fprintf(f, "// For more info go to http://resgen.hltools.com\n");
+	fprintf(f, "// RESGen was created by Jeroen \"ShadowLord\" Bogers,\n");
+	fprintf(f, "// with updates by Zero3Cool, Safto Rangen, Simon Benfold, and Fysiks.\n");
+	fprintf(f, "// Source: https://github.com/fysiks1/resgen\n");
 
 	fprintf(f, "\n// .res entries (" SIZE_T_SPECIFIER "):\n", resfile.size());
 

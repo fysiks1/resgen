@@ -107,7 +107,7 @@ void getexitkey(bool verbal, bool keypress)
 // help & copyrights
 void showcopyright()
 {
-	printf("RESGen version %s, Copyright (C) 2000-2005 Jeroen Bogers and Zero3Cool\n", VERSION);
+	printf("RESGen version %s, Copyright (C) 2000-2026 Jeroen Bogers, Zero3Cool, Safto Rangen, Simon Benfold, and Fysiks\n", VERSION);
 	printf("RESGen comes with ABSOLUTELY NO WARRANTY; for details\n");
 	printf("use the command line switch '-w'.  This is free software,\n");
 	printf("and you are welcome to redistribute it under certain\n");
@@ -163,7 +163,7 @@ void showhelp()
 void showwarranty()
 {
 	printf("RESGen. A tool to create .res files for Half-Life.\n");
-	printf("Copyright (C) 2000-2005 Jeroen Bogers and Zero3Cool\n\n");
+	printf("Copyright (C) 2000-2026 Jeroen Bogers, Zero3Cool, Safto Rangen, Simon Benfold, and Fysiks\n\n");
 
 	printf("RESGen is free software; you can redistribute it and/or modify\n");
 	printf("it under the terms of the GNU General Public License as published by\n");
@@ -182,8 +182,8 @@ void showwarranty()
 
 void showcredits()
 {
-	printf("This program was made by Jeroen \"ShadowLord\" Bogers,\n");
-	printf("with serveral improvements and additions by Zero3Cool.\n\n");
+	printf("This program was created by Jeroen \"ShadowLord\" Bogers,\n");
+	printf("with updates by Zero3Cool, Safto Rangen, Simon Benfold, and Fysiks.\n\n");
 
 	printf("Special thanks to:\n");
 	printf("  \"HoundDawg\" and UnitedAdmins for helping RESGen grow.\n");
