@@ -20,9 +20,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 #ifdef _DEBUG
-#define VERSION "2.2.0 DBG"
+#define VERSION "2.2.1 DBG"
 #else
-#define VERSION "2.2.0"
+#define VERSION "2.2.1"
 #endif
 
 #include <vector>

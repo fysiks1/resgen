@@ -232,31 +232,31 @@ int RESGen::MakeRES(std::string &map, int fileindex, size_t filecount, const Str
 				switch( icon )
 				{
 					case 18:
-						AddRes("icon_obj_custom1_allies", rel_path_spr, ".spr");
-						break;
-					case 19:
-						AddRes("icon_obj_custom1_axis", rel_path_spr, ".spr");
-						break;
-					case 20:
 						AddRes("icon_obj_custom1_neutral", rel_path_spr, ".spr");
 						break;
+					case 19:
+						AddRes("icon_obj_custom1_allies", rel_path_spr, ".spr");
+						break;
+					case 20:
+						AddRes("icon_obj_custom1_axis", rel_path_spr, ".spr");
+						break;
 					case 21:
-						AddRes("icon_obj_custom2_allies", rel_path_spr, ".spr");
-						break;
-					case 22:
-						AddRes("icon_obj_custom2_axis", rel_path_spr, ".spr");
-						break;
-					case 23:
 						AddRes("icon_obj_custom2_neutral", rel_path_spr, ".spr");
 						break;
+					case 22:
+						AddRes("icon_obj_custom2_allies", rel_path_spr, ".spr");
+						break;
+					case 23:
+						AddRes("icon_obj_custom2_axis", rel_path_spr, ".spr");
+						break;
 					case 24:
-						AddRes("icon_obj_custom3_allies", rel_path_spr, ".spr");
+						AddRes("icon_obj_custom3_neutral", rel_path_spr, ".spr");
 						break;
 					case 25:
-						AddRes("icon_obj_custom3_axis", rel_path_spr, ".spr");
+						AddRes("icon_obj_custom3_allies", rel_path_spr, ".spr");
 						break;
 					case 26:
-						AddRes("icon_obj_custom3_neutral", rel_path_spr, ".spr");
+						AddRes("icon_obj_custom3_axis", rel_path_spr, ".spr");
 						break;
 					case 27:
 						AddRes("icon_obj_custom1_brit", rel_path_spr, ".spr");
