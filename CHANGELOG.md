@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.2.1
+- Fix custom objective icon enumeration
+  - If one of the three objective icons (neutral, allies, axis) were
+    excluded, it would add the wrong sprite to the res file.
+
 ## 2.2.0
 - Exclude `tempdecal.wad` as a map resource
 
